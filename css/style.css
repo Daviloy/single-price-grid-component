@@ -1,0 +1,177 @@
+/* Color Variables */
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Karla Font */
+@font-face {
+    font-family: "Karla";
+    font-weight: 400;
+    src: url("../fonts/Karla-Regular.ttf");
+}
+
+body {
+    font-family: "Karla";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.7em;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
+h1 {
+    color: var(--cyan);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+h2 {
+    color: var(--bright-yellow);
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-weight: 200;
+}
+
+h3 + p {
+    margin-top: 2rem;
+}
+
+p {
+    margin: 0.7rem 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Utility Classes */
+.button {
+    background-color: var(--bright-yellow);
+    border-radius: 7px;
+    color: #ffffff;
+    border: none;
+    display: block;
+    margin-top: 3rem;
+    padding: 0.8rem 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Component */
+.component-wrapper {
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.component {
+    max-width: 650px;
+}
+
+.component-header {
+    background-color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 30px;
+}
+
+.component-header p {
+    color: var(--grayish-blue);
+    font-size: 15px;
+}
+
+.component-footer {
+    background-color: hsl(179, 62%, 46%);
+    display: flex;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.component-footer > div {
+    color: #ffffff;
+    flex: 1;
+    padding: 30px;
+}
+
+.component-footer .component-sub {
+    background-color: var(--cyan);
+    border-bottom-left-radius: 10px;
+}
+
+.component-price {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.component-price + span {
+    color: var(--light-gray);
+    font-weight: 100;
+}
+
+.component-footer .component-why {
+    border-bottom-right-radius: 10px;
+    padding-left: 60px;
+}
+
+.component-footer .component-why ul {
+    margin-top: 0.8rem;
+}
+
+.component-footer .component-why ul li {
+    color: var(--light-gray);
+    font-size: 14.5px;
+}
+
+/* Mobile Version */
+@media (max-width: 768px) {
+    .component-wrapper {
+        display: block;
+        padding: 30px;
+        height: auto;
+    }
+
+    .component {
+        margin: auto;
+    }
+
+    .component-footer .component-sub .button {
+        margin-top: 1.5rem;
+    }
+
+    .component-footer {
+        flex-direction: column;
+    }
+
+    .component-footer > div {
+        padding: 20px;
+    }
+
+    .component-footer .component-why {
+        padding-left: 20px;
+    }
+}
